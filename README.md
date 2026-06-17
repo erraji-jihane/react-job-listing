@@ -1,16 +1,100 @@
-# React + Vite
+# React Job Listing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a simple job listing interface built using React.  
+The goal of this project is to practice core React fundamentals through a small UI project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The focus is on learning how to build reusable components and render dynamic data, rather than building a production-level application.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Learning Objectives
 
-## Expanding the ESLint configuration
+This project was built to practice:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React component structure
+- Props (passing data between components)
+- Rendering lists using `map()`
+- Reusable UI components
+- Basic CSS styling for components
+- Simple layout structure
+
+---
+
+## Features
+
+- Dynamic job cards generated from an array of data
+- Reusable `Card` component
+- Clean component-based architecture
+- Basic responsive layout using CSS Grid
+- Simple navigation bar (in progress)
+
+---
+
+## Project Structure
+
+
+src/
+│
+├── components/
+│ ├── Card/
+│ │ ├── Card.jsx
+│ │ └── Card.css
+│ │
+│ ├── Cards/
+│ │ ├── Cards.jsx
+│ │ └── Cards.css
+│ │
+│ └── Navbar/
+│ ├── Navbar.jsx
+│ └── Navbar.css
+│
+├── App.jsx
+└── index.css
+
+
+---
+
+## Tech Stack
+
+- React (Vite)
+- JavaScript (ES6+)
+- CSS (vanilla CSS, no frameworks)
+
+---
+
+## What I Learned
+
+Through this project, I learned how React applications are structured around components.  
+Instead of writing static HTML, data is used to dynamically generate UI elements.
+
+Key idea:
+
+> Data → map() → Components → UI
+
+---
+
+## Future Improvements
+
+This project will be extended with:
+
+- Search bar for jobs
+- Filtering by role / location
+- Better navbar design
+- Job tags (Remote, Full-time, Internship)
+- Improved responsive design
+- Dark mode toggle
+
+---
+
+## Note
+
+This is a learning project.  
+The main goal is understanding React fundamentals and improving UI building skills step by step.
+
+---
+
+## Author
+
+Built by a student learning React and frontend development.
