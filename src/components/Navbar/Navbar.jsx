@@ -1,7 +1,50 @@
+import { Link } from "react-router-dom"
+
 function Navbar (){
+    const links = [
+        {name: "Home", path: "/"},
+        {name: "Jobs", path: "/jobs"},
+        {name:"Companies", path: "/companies"},
+        {name:"Saved Jobs", path: "/saved"}
+    ]
+
     return(
         <nav className = "navbar">
-            <div className = "navbar_logo"> Job Listing</div>
+
+            <div className="nav_left">
+                <div className = "navbar_logo">
+                    Job Listing
+                </div>
+            </div>
+            
+            <div className="nav_center">  
+                {links.map ((link) => (
+                    <Link 
+                    className="nav_link" 
+                    key = {link.name} 
+                    to = {link.path}
+                    >
+                        
+                     {link.name} 
+
+                    </Link>
+                ))}
+
+            </div>
+            <div className="nav_right">
+                <div className="searchBar">
+                    <input 
+                        type="text"
+                        placeholder="Search a job ..."
+                    />
+                </div>
+
+                <div className="auth">
+                    <button className="login">login</button>
+                    <button className="signup">Sign Up</button>
+                 </div>
+            </div>
+            
         </nav>
     )
 }
