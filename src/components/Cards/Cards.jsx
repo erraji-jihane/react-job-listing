@@ -1,7 +1,7 @@
 import Card from '../Card/Card'
 import './Cards.css'
 
-function Cards(){
+function Cards({search}){
 
     const jobs = [
         { title: "Frontend Developer", company: "Silent Believers", location: "Morocco" },
@@ -48,14 +48,18 @@ function Cards(){
         { title: "Game Developer", company: "Epic Games", location: "USA" },
         { title: "Systems Engineer", company: "Intel", location: "USA" }
     ];
+    const filteredJob = jobs.filter((job) => 
+        job.title.toLowerCase().includes(search.toLowerCase()));
     return(
         <div className="cards-container">
-        { jobs.map((job, index) => (
+
+        { filteredJob.map((job, index) => (
             <Card
                 key = {index}
                 title = {job.title}
                 company = {job.company}
                 location = {job.location}
+            
             />
         ))}
         </div>

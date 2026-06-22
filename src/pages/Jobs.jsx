@@ -1,5 +1,5 @@
 import Cards from "../components/Cards/Cards";
 
-export default function Jobs() {
-    return <Cards />;
+export default function Jobs({search}) {
+    return <Cards search = {search}/>;
 }

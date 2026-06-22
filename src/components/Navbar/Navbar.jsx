@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function Navbar (){
+function Navbar ({search,setSearch}){
     const links = [
         {name: "Home", path: "/"},
         {name: "Jobs", path: "/jobs"},
@@ -36,6 +36,8 @@ function Navbar (){
                     <input 
                         type="text"
                         placeholder="Search a job ..."
+                        value = {search}
+                        onChange={(e)=>setSearch(e.target.value)}
                     />
                 </div>
 
