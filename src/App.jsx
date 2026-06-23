@@ -12,7 +12,15 @@ import Saved from "./pages/Saved";
 function App() {
   const [search, setSearch] = useState("");
   const [savedJobs, setSavedJobs] = useState([]);
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState("");
+
+  const removeJob = (jobId)=>{
+    const remainingJobs = savedJobs.filter((job)=> job.id !== jobId );
+    setSavedJobs(remainingJobs);
+    setMessage("Job removed!");
+
+    setTimeout(() => setMessage(""), 2000);
+  };
 
 
 
@@ -21,9 +29,9 @@ function App() {
       <Navbar search={search} setSearch = {setSearch} />
       <Routes>
         <Route path = '/' element = {<Home />}/>
-        <Route path="/jobs" element = {<Jobs search = {search} savedJobs = {savedJobs} setMessage= {setMessage} setSavedJobs={setSavedJobs} />}/>
+        <Route path="/jobs" element = {<Jobs search = {search} savedJobs = {savedJobs} setMessage= {setMessage} setSavedJobs={setSavedJobs} removeJob={removeJob} />}/>
         <Route path = "/companies" element= {<Companies />} />
-        <Route path = "/saved" element= {<Saved savedJobs= {savedJobs} />} />
+        <Route path = "/saved" element= {<Saved savedJobs= {savedJobs} removeJob= {removeJob} />} />
       </Routes>
 
     </>

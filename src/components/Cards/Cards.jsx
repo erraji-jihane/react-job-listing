@@ -1,7 +1,7 @@
 import Card from '../Card/Card'
 import './Cards.css'
 
-function Cards({search,savedJobs,setMessage, setSavedJobs}){
+function Cards({search,savedJobs,setMessage, setSavedJobs,removeJob}){
 
     const jobs = [
         { id: 1, title: "Frontend Developer", company: "Silent Believers", location: "Morocco" },
@@ -57,6 +57,7 @@ function Cards({search,savedJobs,setMessage, setSavedJobs}){
                 savedJobs= {savedJobs}
                 setMessage={setMessage}
                 setSavedJobs = {setSavedJobs}
+                removeJob = {removeJob}
             
             />
         ))}

@@ -1,6 +1,6 @@
 import './Card.css'
 
-function Card ({job,savedJobs,setMessage,setSavedJobs}){
+function Card ({job,savedJobs,setMessage,setSavedJobs,removeJob}){
     const isSaved = savedJobs.some((saved) => saved.id === job.id)
 
     const saveJob = () => { 
@@ -29,6 +29,15 @@ function Card ({job,savedJobs,setMessage,setSavedJobs}){
         > 
             {isSaved? 'Saved': 'Save Job'}
         </button>
+
+        {isSaved && (
+            <button
+                className="remove-btn"
+                onClick = {()=> removeJob(job.id)}
+            >
+                Remove
+            </button>
+        )}
 
         </div>
         
