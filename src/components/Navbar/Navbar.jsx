@@ -1,3 +1,4 @@
+import './Navbar.css'
 import { Link, useLocation } from "react-router-dom"
 
 function Navbar ({search,setSearch}){
