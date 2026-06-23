@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 function Navbar ({search,setSearch}){
+    const location = useLocation();
     const links = [
         {name: "Home", path: "/"},
         {name: "Jobs", path: "/jobs"},
@@ -20,9 +21,9 @@ function Navbar ({search,setSearch}){
             <div className="nav_center">  
                 {links.map ((link) => (
                     <Link 
-                    className="nav_link" 
-                    key = {link.name} 
-                    to = {link.path}
+                        className={`nav_link ${location.pathname === link.path ? 'active' : ''}`}
+                        key={link.name} 
+                        to={link.path}
                     >
                         
                      {link.name} 
