@@ -1,100 +1,80 @@
 # React Job Listing App
 
-## Overview
+🔗 **Live Demo:** [react-job-listing-lkso.vercel.app](https://react-job-listing-lkso.vercel.app/)
 
-This is a simple job listing interface built using React.  
-The goal of this project is to practice core React fundamentals through a small UI project.
-
-The focus is on learning how to build reusable components and render dynamic data, rather than building a production-level application.
+A full-stack job platform with smart search, bookmarks, and AI-powered CV matching.
 
 ---
 
-## Learning Objectives
+## Current Features
 
-This project was built to practice:
-
-- React component structure
-- Props (passing data between components)
-- Rendering lists using `map()`
-- Reusable UI components
-- Basic CSS styling for components
-- Simple layout structure
-
----
-
-## Features
-
-- Dynamic job cards generated from an array of data
-- Reusable `Card` component
-- Clean component-based architecture
-- Basic responsive layout using CSS Grid
-- Simple navigation bar (in progress)
-
----
-
-## Project Structure
-
-
-src/
-│
-├── components/
-│ ├── Card/
-│ │ ├── Card.jsx
-│ │ └── Card.css
-│ │
-│ ├── Cards/
-│ │ ├── Cards.jsx
-│ │ └── Cards.css
-│ │
-│ └── Navbar/
-│ ├── Navbar.jsx
-│ └── Navbar.css
-│
-├── App.jsx
-└── index.css
-
+- Browse job listings
+- Search jobs by title or company
+- Save / unsave jobs
+- Saved jobs page with search
+- Responsive glass-morphism UI
+- Navbar with scroll behavior
+- Deployed on Vercel
 
 ---
 
 ## Tech Stack
 
-- React (Vite)
-- JavaScript (ES6+)
-- CSS (vanilla CSS, no frameworks)
+| Layer | Technology |
+|-------|------------|
+| Frontend | React, React Router, CSS |
+| Deployment | Vercel |
+| Version Control | Git, GitHub |
 
 ---
 
-## What I Learned
+## Roadmap
 
-Through this project, I learned how React applications are structured around components.  
-Instead of writing static HTML, data is used to dynamically generate UI elements.
+### Phase 1: Frontend (Current)
+- [x] Job listing with search
+- [x] Save / unsave jobs
+- [x] Saved jobs page
+- [ ] Companies page
+- [ ] Job details page
+- [ ] User profile page
 
-Key idea:
+### Phase 2: Backend
+- [ ] Node.js + Express API (TypeScript)
+- [ ] MongoDB database
+- [ ] JWT authentication (Login/Signup)
+- [ ] Protected routes
 
-> Data → map() → Components → UI
+### Phase 3: Advanced
+- [ ] CV upload and parsing
+- [ ] Apply to jobs
+- [ ] Email notifications
+- [ ] Pagination
+
+### Phase 4: AI Integration
+- [ ] CV → embeddings → job matching
+- [ ] "Jobs You Might Like" recommendations
+- [ ] Skills gap analysis
 
 ---
 
-## Future Improvements
+## Project Structure
+src/
+├── components/
+│ ├── Card/
+│ ├── Cards/
+│ └── Navbar/
+├── pages/
+│ ├── Home/
+│ ├── Jobs/
+│ └── Saved/
+├── App.jsx
+└── index.css
 
-This project will be extended with:
-
-- Search bar for jobs
-- Filtering by role / location
-- Better navbar design
-- Job tags (Remote, Full-time, Internship)
-- Improved responsive design
-- Dark mode toggle
-
----
-
-## Note
-
-This is a learning project.  
-The main goal is understanding React fundamentals and improving UI building skills step by step.
+text
 
 ---
 
 ## Author
 
-Built by a student learning React and frontend development.
+**Jihane Erraji**  
+[GitHub](https://github.com/erraji-jihane) · [LinkedIn](https://www.linkedin.com/in/jihane-erraji-ba7187337)
