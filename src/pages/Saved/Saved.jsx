@@ -1,7 +1,7 @@
 import './Saved.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function Saved({search, setSearch, savedJobs, removeJob }) {
+export default function Saved({ search, setSearch, savedJobs, removeJob }) {
     const navigate = useNavigate()
 
     const filteredSavedJobs = savedJobs.filter((job) =>
@@ -11,28 +11,28 @@ export default function Saved({search, setSearch, savedJobs, removeJob }) {
     
     return (
         <div className="saved-container">
-            
             <div className="shape shape-1"></div>
             <div className="shape shape-2"></div>
             <div className="shape shape-3"></div>
 
-            <div className="saved-search">
-                <input 
-                    type="text"
-                    placeholder="Search saved jobs ..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-            </div>
-            
-            
-            {filteredSavedJobs.length > 0 && (
-                <h2 className="saved-title">Saved Jobs ({filteredSavedJobs.length})</h2>
+            {/* Only show search bar if there are saved jobs */}
+            {savedJobs.length > 0 && (
+                <div className="saved-header">
+                    <h2 className="saved-title">Saved Jobs ({filteredSavedJobs.length})</h2>
+                    <div className="saved-search">
+                        <input 
+                            type="text"
+                            placeholder="Search saved jobs ..."
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                    </div>
+                </div>
             )}
             
             {filteredSavedJobs.length === 0 ? (
                 <div className="saved-empty">
-                    <p>No saved jobs found</p>
+                    <p>{savedJobs.length === 0 ? 'No saved jobs yet' : 'No saved jobs found'}</p>
                     <button 
                         className="saved-empty-btn"
                         onClick={() => navigate('/jobs')}
@@ -56,7 +56,6 @@ export default function Saved({search, setSearch, savedJobs, removeJob }) {
                         </div>
                     ))}
                 </div>
-                
             )}
         </div>         
     );
