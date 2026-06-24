@@ -4,10 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 
-import Home from "./pages/Home";
-import Jobs from "./pages/Jobs";
-import Companies from "./pages/Companies";
-import Saved from "./pages/Saved";
+import Home from "./pages/Home/Home";
+import Jobs from "./pages/Jobs/Jobs";
+import Companies from "./pages/Companies/Companies";
+import Saved from "./pages/Saved/Saved";
 
 function App() {
   const [search, setSearch] = useState("");
