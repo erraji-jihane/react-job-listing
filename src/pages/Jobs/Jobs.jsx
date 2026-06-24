@@ -1,4 +1,4 @@
-import Cards from "../components/Cards/Cards";
+import Cards from "../../components/Cards/Cards";
 
 export default function Jobs({search,savedJobs,setMessage,setSavedJobs,removeJob}) {
 
