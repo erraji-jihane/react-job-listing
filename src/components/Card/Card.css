@@ -7,3 +7,70 @@
   border: 1px solid rgba(226, 232, 240, 0.6);
   transition: all 0.2s ease;
 }
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #dce1e8;
+}
+
+.card h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0b1a2e;
+  margin: 0 0 4px 0;
+}
+
+.card .company {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e3a5f;
+  margin: 0 0 2px 0;
+}
+
+.card .location {
+  font-size: 13px;
+  color: #6b7a8f;
+  margin: 0 0 16px 0;
+}
+
+.card .button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card button {
+  padding: 6px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.card .save-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.card .save-btn:hover:not(:disabled) {
+  background: #6d28d9;
+}
+
+.card .save-btn:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: default;
+}
+
+.card .remove-btn {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.card .remove-btn:hover {
+  background: #fecaca;
+  border-color: #f87171;
+}

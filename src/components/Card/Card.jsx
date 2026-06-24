@@ -20,24 +20,24 @@ function Card ({job,savedJobs,setMessage,setSavedJobs,removeJob}){
         
         <div className="card"> 
             <h2>{job.title}</h2>
-            <p>{job.company}</p>
-            <p>{job.location}</p>
+            <p className='company'>{job.company}</p>
+            <p className='location'>{job.location}</p>
         
-        <button 
-            onClick={saveJob}
-            disabled = {isSaved}
-        > 
-            {isSaved? 'Saved': 'Save Job'}
-        </button>
-
-        {isSaved && (
-            <button
-                className="remove-btn"
-                onClick = {()=> removeJob(job.id)}
-            >
-                Remove
-            </button>
-        )}
+            {isSaved ? (
+                <button 
+                    className="remove-btn"
+                    onClick={() => removeJob(job.id)}
+                >
+                    Remove
+                </button>
+            ) : (
+                <button 
+                    className="save-btn"
+                    onClick={saveJob}
+                >
+                    Save Job
+                </button>
+            )}
 
         </div>
         
