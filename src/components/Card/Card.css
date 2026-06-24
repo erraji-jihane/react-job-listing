@@ -33,12 +33,6 @@
   margin: 0 0 16px 0;
 }
 
-.card .button-group {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
 .card button {
   padding: 6px 18px;
   border: none;
@@ -54,14 +48,8 @@
   color: white;
 }
 
-.card .save-btn:hover:not(:disabled) {
+.card .save-btn:hover {
   background: #6d28d9;
-}
-
-.card .save-btn:disabled {
-  background: #e5e7eb;
-  color: #9ca3af;
-  cursor: default;
 }
 
 .card .remove-btn {
