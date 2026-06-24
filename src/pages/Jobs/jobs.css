@@ -39,4 +39,25 @@
     width: 40px;
     height: 3px;
   }
+
+    .searchBar input {
+    width: 100%;
+  }
+}
+
+.searchBar input {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.searchBar input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }

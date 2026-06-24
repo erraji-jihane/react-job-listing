@@ -2,7 +2,7 @@ import './Navbar.css'
 import { Link, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react" 
 
-function Navbar ({search,setSearch}){
+function Navbar (){
     const location = useLocation();
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -52,15 +52,7 @@ function Navbar ({search,setSearch}){
 
             </div>
             <div className="nav_right">
-                <div className="searchBar">
-                    <input 
-                        type="text"
-                        placeholder="Search a job ..."
-                        value = {search}
-                        onChange={(e)=>setSearch(e.target.value)}
-                    />
-                </div>
-
+                
                 <div className="auth">
                     <button className="login">login</button>
                     <button className="signup">Sign Up</button>

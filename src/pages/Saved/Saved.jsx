@@ -1,8 +1,13 @@
 import './Saved.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function Saved({ savedJobs, removeJob }) {
+export default function Saved({search, setSearch, savedJobs, removeJob }) {
     const navigate = useNavigate()
+
+    const filteredSavedJobs = savedJobs.filter((job) =>
+        job.title.toLowerCase().includes(search.toLowerCase()) ||
+        job.company.toLowerCase().includes(search.toLowerCase())
+    );
     
     return (
         <div className="saved-container">
@@ -10,15 +15,24 @@ export default function Saved({ savedJobs, removeJob }) {
             <div className="shape shape-1"></div>
             <div className="shape shape-2"></div>
             <div className="shape shape-3"></div>
+
+            <div className="saved-search">
+                <input 
+                    type="text"
+                    placeholder="Search saved jobs ..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+            </div>
             
             
-            {savedJobs.length > 0 && (
-                <h2 className="saved-title">Saved Jobs ({savedJobs.length})</h2>
+            {filteredSavedJobs.length > 0 && (
+                <h2 className="saved-title">Saved Jobs ({filteredSavedJobs.length})</h2>
             )}
             
-            {savedJobs.length === 0 ? (
+            {filteredSavedJobs.length === 0 ? (
                 <div className="saved-empty">
-                    <p>No saved jobs yet</p>
+                    <p>No saved jobs found</p>
                     <button 
                         className="saved-empty-btn"
                         onClick={() => navigate('/jobs')}
@@ -28,7 +42,7 @@ export default function Saved({ savedJobs, removeJob }) {
                 </div>
             ) : (
                 <div className="saved-grid">
-                    {savedJobs.map((job) => (
+                    {filteredSavedJobs.map((job) => (
                         <div key={job.id} className="saved-card">
                             <h3>{job.title}</h3>
                             <p className="company">{job.company}</p>
@@ -42,6 +56,7 @@ export default function Saved({ savedJobs, removeJob }) {
                         </div>
                     ))}
                 </div>
+                
             )}
         </div>         
     );

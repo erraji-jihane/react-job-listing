@@ -26,13 +26,16 @@ function App() {
 
   return (
     <>
-      <Navbar search={search} setSearch = {setSearch} />
+      <Navbar/>
+      
       <Routes>
         <Route path = '/' element = {<Home />}/>
-        <Route path="/jobs" element = {<Jobs search = {search} savedJobs = {savedJobs} setMessage= {setMessage} setSavedJobs={setSavedJobs} removeJob={removeJob} />}/>
+        <Route path = "/jobs" element = {<Jobs search = {search} setSearch={setSearch} savedJobs = {savedJobs} setMessage= {setMessage} setSavedJobs={setSavedJobs} removeJob={removeJob} />}/>
         <Route path = "/companies" element= {<Companies />} />
-        <Route path = "/saved" element= {<Saved savedJobs= {savedJobs} removeJob= {removeJob} />} />
+        <Route path = "/saved" element= {<Saved search = {search} setSearch={setSearch} savedJobs= {savedJobs} removeJob= {removeJob} />} />
       </Routes>
+
+      
 
     </>
   );
