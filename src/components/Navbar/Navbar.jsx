@@ -1,8 +1,26 @@
 import './Navbar.css'
 import { Link, useLocation } from "react-router-dom"
+import { useState, useEffect } from "react" 
 
 function Navbar ({search,setSearch}){
     const location = useLocation();
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+            const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+            
+            setVisible(isVisible);
+            setPrevScrollPos(currentScrollPos);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
+
+    
+    
     const links = [
         {name: "Home", path: "/"},
         {name: "Jobs", path: "/jobs"},
@@ -11,7 +29,7 @@ function Navbar ({search,setSearch}){
     ]
 
     return(
-        <nav className = "navbar">
+        <nav className={`navbar ${visible ? 'visible' : 'hidden'}`}>
 
             <div className="nav_left">
                 <div className = "navbar_logo">

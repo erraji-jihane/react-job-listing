@@ -4,22 +4,32 @@
   justify-content: space-between;
   padding: 10px 28px;
   margin: 16px 24px;
-  background: rgba(220, 225, 235, 0.25);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 16px;
   z-index: 100;
   overflow: visible;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .navbar:hover {
-  background: rgba(220, 225, 235, 0.35);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .nav_left {
@@ -70,14 +80,14 @@
   border-radius: 10px;
   font-size: 13px;
   width: 200px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(4px);
   transition: all 0.2s ease;
 }
 
 .searchBar input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
