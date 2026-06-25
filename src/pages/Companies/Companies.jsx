@@ -1,5 +1,5 @@
 import jobsData from '../../data/jobsData.json'
-import  './companies.css'
+import  './Companies.css'
 export default function Companies() {
     const companies = []
     jobsData.forEach((job)=>{
@@ -11,7 +11,7 @@ export default function Companies() {
             companies.push({
                 name: job.company,
                 location: job.location,
-                job: 1
+                jobs: 1
             })
         }
 
