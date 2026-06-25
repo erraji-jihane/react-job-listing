@@ -1,4 +1,5 @@
 import jobsData from '../../data/jobsData.json'
+import  './companies.css'
 export default function Companies() {
     const companies = []
     jobsData.forEach((job)=>{

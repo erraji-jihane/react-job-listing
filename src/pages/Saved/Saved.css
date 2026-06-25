@@ -1,16 +1,17 @@
 .saved-container {
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 24px;
   min-height: 80vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
-/* Header with title and search */
 .saved-header {
   display: flex;
   align-items: center;
@@ -42,7 +43,6 @@
   border-radius: 4px;
 }
 
-/* Search bar - matches Jobs page */
 .saved-search {
   display: flex;
   justify-content: flex-end;
@@ -102,9 +102,10 @@
 .saved-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 24px;
   width: 100%;
   margin-top: 16px;
+  box-sizing: border-box;
 }
 
 .saved-card {
@@ -114,6 +115,7 @@
   padding: 20px 22px;
   border: 1px solid rgba(226, 232, 240, 0.6);
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .saved-card:hover {
@@ -158,7 +160,6 @@
   border-color: #f87171;
 }
 
-/* Floating shapes */
 .shape {
   position: fixed;
   pointer-events: none;
@@ -208,7 +209,7 @@
 @media (max-width: 1024px) {
   .saved-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 20px;
   }
 }
 
@@ -235,7 +236,7 @@
 
   .saved-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
     margin-top: 12px;
   }
 
