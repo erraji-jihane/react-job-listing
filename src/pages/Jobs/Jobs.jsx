@@ -1,5 +1,5 @@
 import Cards from "../../components/Cards/Cards";
-import './jobs.css'
+import './Jobs.css'
 
 export default function Jobs({ search, setSearch, savedJobs, setMessage, setSavedJobs, removeJob }) {
     return (
