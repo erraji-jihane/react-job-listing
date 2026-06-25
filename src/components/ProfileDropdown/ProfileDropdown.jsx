@@ -34,11 +34,11 @@ export default function ProfileDropdown({ isOpen, onClose }) {
                 </div>
                 <div className="dropdown-item">
                     <FaBriefcase size={16} />
-                    <Link to="/saved" onClick={onClose}>Saved Jobs ({user.savedJobs})</Link>
+                    <Link to="/saved" onClick={onClose}>Saved Jobs </Link>
                 </div>
                 <div className="dropdown-item">
                     <FaCog size={16} />
-                    <span>Settings</span>
+                    <Link to="/settings" onClick={onClose}>Settings</Link>
                 </div>
 
                 <hr className="dropdown-divider" />
