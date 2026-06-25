@@ -1,6 +1,7 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
 import { FaRocket, FaBriefcase } from 'react-icons/fa'
+import jobsData from '../../data/jobsData.json'
 
 export default function Home() {
 
