@@ -25,7 +25,8 @@ function Navbar (){
         {name: "Home", path: "/"},
         {name: "Jobs", path: "/jobs"},
         {name:"Companies", path: "/companies"},
-        {name:"Saved Jobs", path: "/saved"}
+        {name:"Saved Jobs", path: "/saved"},
+        {name: "Profile", path: "/profile"}
     ]
 
     return(

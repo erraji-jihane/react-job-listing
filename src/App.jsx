@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Jobs from "./pages/Jobs/Jobs";
 import Companies from "./pages/Companies/Companies";
 import Saved from "./pages/Saved/Saved";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -33,6 +34,7 @@ function App() {
         <Route path = "/jobs" element = {<Jobs search = {search} setSearch={setSearch} savedJobs = {savedJobs} setMessage= {setMessage} setSavedJobs={setSavedJobs} removeJob={removeJob} />}/>
         <Route path = "/companies" element= {<Companies />} />
         <Route path = "/saved" element= {<Saved search = {search} setSearch={setSearch} savedJobs= {savedJobs} removeJob= {removeJob} />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
 
       
