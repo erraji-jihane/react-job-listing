@@ -1,11 +1,13 @@
 import './Navbar.css'
 import { Link, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react" 
+import ProfileDropdown from "../ProfileDropdown/ProfileDropdown"
 
 function Navbar (){
     const location = useLocation();
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     useEffect(() => {
             const handleScroll = () => {
@@ -26,7 +28,6 @@ function Navbar (){
         {name: "Jobs", path: "/jobs"},
         {name:"Companies", path: "/companies"},
         {name:"Saved Jobs", path: "/saved"},
-        {name: "Profile", path: "/profile"}
     ]
 
     return(
@@ -58,7 +59,17 @@ function Navbar (){
                     <button className="login">login</button>
                     <button className="signup">Sign Up</button>
                  </div>
+            
+                           
+                <div className="profile-icon" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                    <span className="profile-icon-letter">J</span>
+                </div>
             </div>
+
+            <ProfileDropdown 
+                isOpen={isDropdownOpen} 
+                onClose={() => setIsDropdownOpen(false)} 
+            />
             
         </nav>
     )

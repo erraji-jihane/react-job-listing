@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 
+
 import Home from "./pages/Home/Home";
 import Jobs from "./pages/Jobs/Jobs";
 import Companies from "./pages/Companies/Companies";
@@ -35,6 +36,7 @@ function App() {
         <Route path = "/companies" element= {<Companies />} />
         <Route path = "/saved" element= {<Saved search = {search} setSearch={setSearch} savedJobs= {savedJobs} removeJob= {removeJob} />} />
         <Route path="/profile" element={<Profile />} />
+
       </Routes>
 
       

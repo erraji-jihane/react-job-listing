@@ -74,7 +74,30 @@
   gap: 14px;
 }
 
+/* 👇 Profile Icon */
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
 
+.profile-icon:hover {
+  transform: scale(1.05);
+}
+
+.profile-icon-letter {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
 
 .auth {
   display: flex;
@@ -125,8 +148,6 @@
     justify-content: center;
     gap: 20px;
   }
-
-
 }
 
 @media (max-width: 600px) {
@@ -152,6 +173,16 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .profile-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .profile-icon-letter {
+    font-size: 14px;
+  }
+
   .auth button {
     padding: 6px 12px;
     font-size: 12px;
