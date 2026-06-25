@@ -4,6 +4,14 @@ import { FaRocket, FaBriefcase } from 'react-icons/fa'
 
 export default function Home() {
 
+    const companies = [...new Set(jobsData.map(job => job.company))];
+    const countries = [...new Set(jobsData.map(job => job.location))];
+
+    const totalJobs = jobsData.length;
+    const totalCompanies = companies.length;
+    const totalCountries = countries.length;
+
+
     return (
         <div className="home-container">
              <div className="shape shape-1"></div>
@@ -31,15 +39,15 @@ export default function Home() {
                 </div>
                 <div className="home-stats">
                     <div className="stat-item">
-                        <span className="stat-number">40+</span>
+                        <span className="stat-number">{totalJobs}+</span>
                         <span className="stat-label">Live Jobs</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">15+</span>
+                        <span className="stat-number">{totalCompanies}+</span>
                         <span className="stat-label">Companies</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">5+</span>
+                        <span className="stat-number">{totalCountries}+</span>
                         <span className="stat-label">Countries</span>
                     </div>
                 </div>
