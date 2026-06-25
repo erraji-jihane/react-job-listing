@@ -9,7 +9,7 @@ import Jobs from "./pages/Jobs/Jobs";
 import Companies from "./pages/Companies/Companies";
 import Saved from "./pages/Saved/Saved";
 import Profile from "./pages/Profile/Profile";
-import Settings from "./pages/Settings/Settings";
+import Settings from "./pages/settings/settings";
 
 
 function App() {
