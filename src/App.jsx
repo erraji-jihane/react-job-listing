@@ -1,4 +1,3 @@
-import Cards from "./components/Cards/Cards";
 import Navbar from "./components/Navbar/Navbar"
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
