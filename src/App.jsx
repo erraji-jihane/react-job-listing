@@ -10,6 +10,7 @@ import Companies from "./pages/Companies/Companies";
 import Saved from "./pages/Saved/Saved";
 import Profile from "./pages/Profile/Profile";
 import Settings from "./pages/Settings/Settings";
+import JobDetails from "./pages/JobDetails/JobDetails";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path = "/saved" element= {<Saved search = {search} setSearch={setSearch} savedJobs= {savedJobs} removeJob= {removeJob} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/job/:id" element={<JobDetails />} />
 
 
       </Routes>
