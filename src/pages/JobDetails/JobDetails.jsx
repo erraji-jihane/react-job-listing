@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import jobsData from '../../data/jobsData.json'
+import './JobDetails.css'  
+
 export default function JobDetails(){
     const { id } = useParams()
     const job = jobsData.find(job => job.id === parseInt(id))
