@@ -1,3 +1,9 @@
+.card-link {
+    text-decoration: none;  /* 👈 Remove underline from link */
+    display: block;
+    color: inherit;         /* 👈 Keep text color same */
+}
+
 .card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
@@ -35,8 +41,11 @@
 
 .card .card-buttons {
   display: flex;
-  gap: 18px;
+  justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
 }
 
 .card button {
@@ -49,12 +58,16 @@
   transition: all 0.15s ease;
 }
 
-/* 👇 Save button - clear background (outline) */
 .card .save-btn {
   background: transparent;
   color: #7c3aed;
   border: 1px solid #7c3aed;
-  order: 2;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 18px;
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 
 .card .save-btn:hover {
@@ -62,7 +75,6 @@
   color: white;
 }
 
-/* 👇 Remove button - clear background (outline) */
 .card .remove-btn {
   background: transparent;
   color: #991b1b;
@@ -71,23 +83,4 @@
 
 .card .remove-btn:hover {
   background: #fee2e2;
-}
-
-/* 👇 View Details - filled (primary) */
-.card .view-btn {
-  display: inline-block;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-  background: #7c3aed;
-  color: white;
-  border: 1px solid #7c3aed;
-  transition: all 0.15s ease;
-  order: 1;
-}
-
-.card .view-btn:hover {
-  background: #6d28d9;
 }

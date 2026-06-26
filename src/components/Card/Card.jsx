@@ -18,34 +18,38 @@ function Card ({job,savedJobs,setMessage,setSavedJobs,removeJob}){
     };
 
     return (
-        
-        <div className="card"> 
-            <h2>{job.title}</h2>
-            <p className='company'>{job.company}</p>
-            <p className='location'>{job.location}</p>
-        
-            {isSaved ? (
-                <button 
-                    className="remove-btn"
-                    onClick={() => removeJob(job.id)}
-                >
-                    Remove
-                </button>
-            ) : (
-                <button 
-                    className="save-btn"
-                    onClick={saveJob}
-                >
-                    Save Job
-                </button>
-            )}
-                <Link to={`/job/${job.id}`} className="view-btn">
-                    View Details
-                </Link>
+        <Link to={`/job/${job.id}`} className="card-link">
+            
+            <div className="card"> 
+                <h2>{job.title}</h2>
+                <p className='company'>{job.company}</p>
+                <p className='location'>{job.location}</p>
+            
+                {isSaved ? (
+                    <button 
+                        className="remove-btn"
+                        onClick={(e) =>{
+                            e.preventDefault()
+                            removeJob(job.id)
+                        }}
+                    >
+                        Remove
+                    </button>
+                ) : (
+                    <button 
+                        className="save-btn"
+                        onClick={(e) => {
+                            e.preventDefault()
+                            saveJob()
+                        }}
+                    >
+                        Save Job
+                    </button>
+                )}
 
-        </div>
-        
-
+            </div>
+            
+    </Link>
     );
 }
 export default Card;
