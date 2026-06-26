@@ -33,6 +33,12 @@
   margin: 0 0 16px 0;
 }
 
+.card .card-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
 .card button {
   padding: 6px 18px;
   border: none;
@@ -43,22 +49,45 @@
   transition: all 0.15s ease;
 }
 
+/* 👇 Save button - clear background (outline) */
 .card .save-btn {
+  background: transparent;
+  color: #7c3aed;
+  border: 1px solid #7c3aed;
+  order: 2;
+}
+
+.card .save-btn:hover {
   background: #7c3aed;
   color: white;
 }
 
-.card .save-btn:hover {
-  background: #6d28d9;
-}
-
+/* 👇 Remove button - clear background (outline) */
 .card .remove-btn {
-  background: #fee2e2;
+  background: transparent;
   color: #991b1b;
   border: 1px solid #fca5a5;
 }
 
 .card .remove-btn:hover {
-  background: #fecaca;
-  border-color: #f87171;
+  background: #fee2e2;
+}
+
+/* 👇 View Details - filled (primary) */
+.card .view-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #7c3aed;
+  color: white;
+  border: 1px solid #7c3aed;
+  transition: all 0.15s ease;
+  order: 1;
+}
+
+.card .view-btn:hover {
+  background: #6d28d9;
 }
