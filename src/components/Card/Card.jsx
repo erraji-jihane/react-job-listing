@@ -1,4 +1,5 @@
 import './Card.css'
+import { Link } from 'react-router-dom'
 
 function Card ({job,savedJobs,setMessage,setSavedJobs,removeJob}){
     const isSaved = savedJobs.some((saved) => saved.id === job.id)
@@ -38,6 +39,9 @@ function Card ({job,savedJobs,setMessage,setSavedJobs,removeJob}){
                     Save Job
                 </button>
             )}
+                <Link to={`/job/${job.id}`} className="view-btn">
+                    View Details
+                </Link>
 
         </div>
         
